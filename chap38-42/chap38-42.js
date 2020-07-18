@@ -69,6 +69,26 @@ function avePer(marks1, marks2, marks3) {
 avePer(marks1, marks2, marks3);
 
 //Q # 5
+document.write("<br/><br/><br/>");
+document.write("<h1>Custom IndexOf Function</h1>");
+
+function customIndexOf(str, qStr) {
+    for (var i = 0; i < str.length; i++) {
+        for (var j = 0; j < qStr.length; j++) {
+            if (str[i + j] !== qStr[j]) {
+                break;
+            }
+            if (j === qStr.length - 1) {
+                return i;
+            }
+        }
+    }
+    return -1;
+}
+var exampleString = prompt("Enter the example string:");
+var queryString = prompt("Enter the part of string to find index of:");
+document.writeln("Index of " + queryString + " in " + exampleString + " is " + (customIndexOf(exampleString, queryString)));
+
 //Q # 6
 document.write("<br/><br/><br/>");
 document.write("<h1>Vowel Remover</h1>");
@@ -84,20 +104,79 @@ document.write("Output String: " + answer);
 document.write("<br/><br/><br/>");
 document.write("<h1>Vowel Occurence</h1>");
 
-function isVowel(ch) {
-    switch (ch) {
-        case 'A':
-        case 'a':
-        case 'E':
-        case 'e':
-        case 'I':
-        case 'i':
-        case 'O':
-        case 'o':
-        case 'U':
-        case 'u':
-            return 1;
-        default:
-            return 0;
+
+//Q # 8
+document.write("<br/><br/><br/>");
+document.write("<h1>Distance Converter</h1>");
+
+var dist = prompt("Enter the distance between two cities in KM:");
+document.write("Entered distance is: " + dist);
+
+function kmMeter(distance) {
+    var answer = parseFloat(distance) * 1000;
+    document.write("<br/>Distance between two cities in meters is " + answer + " m");
+}
+
+function kmFeet(distance) {
+    var answer = parseFloat(distance) * 3280.84;
+    document.write("<br/>Distance between two cities in feet is " + answer + " ft");
+}
+
+function kmInches(distance) {
+    var answer = parseFloat(distance) * 39370.1;
+    document.write("<br/>Distance between two cities in inches is " + answer + " inches");
+}
+
+function kmCentimetres(distance) {
+    var answer = parseFloat(distance) * 100000;
+    document.write("<br/>Distance between two cities in centimeters is " + answer + " cm");
+}
+kmMeter(dist);
+kmFeet(dist);
+kmInches(dist);
+kmCentimetres(dist);
+
+//Q # 9
+document.write("<br/><br/><br/>");
+document.write("<h1>Overtime Calculator</h1>");
+
+var workingHours = prompt("Enter the working hours of employee:");
+document.write("Entered working hours: " + workingHours);
+
+function overtime(wh) {
+    var ot = parseFloat(wh) - 40;
+    if (ot <= 0) {
+        document.write("No overtime or invalid input");
+    } else {
+        var result = ot * 12;
+        document.write("<br/>The employee must be given RS. " + result + " as overtime with salary");
     }
 }
+
+overtime(workingHours);
+
+//Q # 10
+document.write("<br/><br/><br/>");
+document.write("<h1>Notes Denomination</h1>");
+
+function denomination(amountt) {
+    var hCount = 0,
+        fCount = 0,
+        tCount = 0;
+    if ((amt / 100) > 0) {
+        hCount = Math.floor(amount / 100);
+        amount -= (hCount * 100);
+    }
+    if ((amount / 50) > 0) {
+        fCount = Math.floor(amount / 50);
+        amount -= (fCount * 50);
+    }
+    if ((amount / 10) > 0) {
+        tCount = Math.floor(amount / 10);
+        amount -= (tCount * 10);
+    }
+    document.writeln("You will have " + hCount + " hundred notes " + fCount + " fifty notes " + tCount + " ten notes.")
+}
+var amount = prompt("Enter amount to withdraw:");
+amt = parseInt(amount);
+denomination(amount);
