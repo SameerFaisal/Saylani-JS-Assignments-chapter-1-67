@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 52-57</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="gallery" id="gallery">
+                <img onclick="open_img_box()" src="images/10.jpg" alt="">
+                <img onclick="open_img_box()" src="images/8.jpg" alt="">
+                <img onclick="open_img_box()" src="images/6.jpg" alt="">
+                <img onclick="open_img_box()" src="images/11.jpg" alt="">
+                <img onclick="open_img_box()" src="images/1.jpg" alt="">
+                <img onclick="open_img_box()" src="images/2.jpg" alt="">
+                <img onclick="open_img_box()" src="images/4.png" alt="">
+                <img onclick="open_img_box()" src="images/6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="model_gallery">
+            <img id="model_img" src="images/10.jpg" alt="">
+            <button class="prevbtn" onclick="previous_img()">Previous</button>
+            <button class="nextbtn" onclick="next_img()">Next</button>
+            <div id="close_btn" onclick="close_img_model()">
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora corporis quod at quo eaque eveniet voluptatem nam aperiam exercitationem soluta laborum, provident sed otam amet asperiores maiores sit autem magnam pariatur optio a necessitatibus atque.
+                Deleniti ea, vero quo repellat, delectus obcaecati, sed aperiam nihil omnis dignissimos harum consequuntur minima doloremque tenetur quos nobis voluptatem libero mollitia quam quasi illo doloribus! Itaque soluta delectus ullam ut quos
+                laudantium minus at harum, laboriosam corrupti, perspiciatis provident laborum? Minima ex, quibusdam eaque eos odit doloremque beatae tempore veritatis ullam iste aliquam impedit architecto voluptatum aspernatur laborum consequuntur, reprehenderit
+                expedita repudiandae. Quas, architecto.
+                <br>
+                <br>
+            </p>
+
+            <button class="button" onclick="incr_f_size()">Zoom In</button>
+            <button class="button" onclick="dcr_f_size()">Zoom Out</button>
+        </div>
+    </div>
+
+    <div>
+
+
+        <script src="chap53-58.js"></script>
+</body>
+
+</html>
